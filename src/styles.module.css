@@ -1,0 +1,79 @@
+/* add css module styles here (optional) */
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: -150px;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: hidden;
+  z-index: 10000;
+}
+
+.overlay {
+  z-index: -1;
+  position: fixed;
+  inset: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.modal {
+  position: fixed;
+  width: 600px;
+  height: auto;
+  max-height: 550px;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  outline: 0;
+  background-color: #fff;
+  color: #000;
+  border: 0;
+  border-radius: 16px;
+}
+
+.modalHeader {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  /* border-bottom: 1px solid #dee2e6; */
+  border-top-left-radius: calc(.3rem - 1px);
+  border-top-right-radius: calc(.3rem - 1px);
+}
+
+.modalTitle {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.btnClose {
+  background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
+  height: 1em;
+  width: 1em;
+  border: 0;
+  cursor: pointer;
+}
+
+.modalBody {
+  padding: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .modal {
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    border-radius: 16px 16px 0 0;
+  }
+}
