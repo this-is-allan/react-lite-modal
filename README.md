@@ -1,4 +1,4 @@
-# modal
+# lite modal under construction
 
 > modal component
 
